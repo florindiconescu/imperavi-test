@@ -1,0 +1,42 @@
+.arx-control {
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 22px;
+    line-height: 1;
+    flex-direction: column;
+
+    & .arx-button {
+        padding-top: 2px;
+        width: 22px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 1;
+        color: #fff;
+        background-color: rgba($color-blue, .75);
+        border-bottom: 1px solid rgba(#fff, .2);
+        &:first-child {
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+        }
+        &:last-child {
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-bottom-color: transparent;
+        }
+        &:hover {
+            background-color: $color-blue;
+            text-decoration: none;
+        }
+    }
+    & .arx-button-icon {
+        & svg {
+            position: relative;
+            top: -1px;
+            fill: #fff;
+        }
+    }
+
+}

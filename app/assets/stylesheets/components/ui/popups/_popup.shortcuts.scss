@@ -1,0 +1,40 @@
+.arx-popup-shortcuts {
+    min-width: 0;
+    max-width: 400px;
+    padding: 16px;
+    padding-right: 32px;
+    & div {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba($color-black, .05);
+        &:last-child {
+            border-bottom-color: transparent;
+        }
+    }
+    & kbd {
+        width: 160px;
+        white-space: nowrap;
+        line-height: 20px;
+        font-family: $font-monospace;
+        font-size: 12px;
+        border: none;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0;
+        padding-top: 3px;
+        background: none;
+        vertical-align: baseline;
+        & b {
+            font-weight: normal;
+            font-size: 18px;
+            display: inline-block;
+            line-height: 12px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    & span {
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+}

@@ -1,6 +1,6 @@
 <%= simple_form_for @article do |f| %>
   <%= f.input :title %>
-  <%= f.input :rich_text %>
+  <%= f.input :rich_text, input_html: { id: "entry"} %>
   <%= f.input :date %>
   <%= f.input :published %>
   <%= f.input :read_time %>

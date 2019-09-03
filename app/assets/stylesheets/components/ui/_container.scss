@@ -1,0 +1,24 @@
+.arx-container {
+    box-sizing: border-box;
+    border: 1px solid rgba($color-black, .08);
+    border-radius: 2px;
+}
+.arx-top-container {
+    position: relative;
+    z-index: 4;
+}
+.arx-toolbar-container {
+    display: flex;
+    font-family: $font;
+    font-size: 13px;
+    background-color: rgba(#f8f8f8, .97);
+    border-bottom: 1px solid rgba($color-black, .04);
+
+}
+.arx-source-container {
+    display: none;
+}
+.arx-editor-container {
+    background-color: #fff;
+
+}

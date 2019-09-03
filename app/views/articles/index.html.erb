@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+  <h3><%= article.title %></h3>
+  <p><%= raw(article.rich_text) %></p>
+  <p>Reading time: <%= article.read_time %> minutes</p>
+  <p><small><%= article.date %></small></p>
+  <p>Author: <%= article.member.name %></p>
+<% end %>

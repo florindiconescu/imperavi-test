@@ -1,0 +1,19 @@
+.arx-specialchars-popup {
+    max-width: 374px;
+    padding: 0;
+}
+.arx-specialchars-popup .arx-popup-tool {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 374px;
+}
+.arx-specialchars-popup .arx-button {
+    margin-bottom: -1px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #eee;
+    border-left-color: transparent;
+}

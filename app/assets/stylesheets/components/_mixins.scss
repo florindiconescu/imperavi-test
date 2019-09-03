@@ -1,0 +1,15 @@
+// transition
+@mixin transition($transition: all linear .2s) {
+    -moz-transition: $transition;
+    transition: $transition;
+}
+
+// for small screens
+@mixin for-sm {
+    @media only screen and (max-width: $sm - 1) { @content; }
+}
+
+// not for small screens
+@mixin not-sm {
+    @media only screen and (min-width: $sm) { @content; }
+}

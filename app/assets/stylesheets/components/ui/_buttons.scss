@@ -1,0 +1,25 @@
+.arx-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-decoration: none;
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    & .arx-button-icon {
+        display: inline-flex;
+        & svg {
+            display: inline-block;
+        }
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+.arx-button-hidden {
+    display: none !important;
+}

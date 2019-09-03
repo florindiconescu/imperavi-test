@@ -1,0 +1,27 @@
+.arx-popup-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 412px;
+
+    & .arx-button {
+        border: 1px solid transparent;
+    }
+    & .arx-button:hover {
+        background-color: rgba($color-blue, .04);
+        border-color: rgba($color-blue, .3);
+    }
+}
+.arx-popup-s-grid {
+    padding-top: 4px;
+    width: 72px;
+    display: flex;
+}
+.arx-popup-s-column {
+    background-color: rgba($color-blue, .05);
+    border: 2px dashed rgba($color-blue, .25);
+    height: 28px;
+}
+.arx-popup-s-column + .arx-popup-s-column {
+    margin-left: 5px;
+}

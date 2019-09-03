@@ -1,0 +1,29 @@
+.arx-toolbar {
+    white-space: nowrap;
+
+    & .arx-button {
+        min-width: 44px;
+        padding-top: 2px;
+        height: 40px;
+        font-size: 16px;
+        color: rgba($color-black, .85);
+        border-right: 1px solid rgba($color-black, .05);
+        background-color: #fff;
+        & svg {
+            fill: rgba($color-black, .85);
+        }
+        &:hover {
+            @include transition;
+            color: #111;
+            background-color: #e4e4e4;
+            & svg {
+                fill: #111;
+            }
+        }
+        &.disable {
+            cursor: default;
+            opacity: .5;
+            background: #fff;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.arx-reset {
+    * {
+        box-sizing: border-box;
+        background: transparent;
+        border: 0;
+        font-size: 100%;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    figcaption,
+	blockquote {
+        &:empty {
+    		min-height: 1.5em;
+		}
+	}
+    strong,
+	b,
+	em,
+	i,
+	span,
+	sup,
+	sub,
+	u,
+	ins {
+    	&:empty {
+            display: inline-block;
+            min-width: 1px;
+            min-height: 1em;
+		}
+	}
+	table {
+    	empty-cells: show;
+	}
+    embed, img, object {
+        max-width: 100%;
+        height: auto;
+    }
+    figure {
+        display: block;
+        max-width: 100%;
+    }
+    figcaption {
+        font-size: 80%;
+        text-align: left;
+    }
+}

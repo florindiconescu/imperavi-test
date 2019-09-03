@@ -1,0 +1,50 @@
+/* paragraph */
+.arx-content p.st-lead {
+    font-size: 24px;
+    color: #444;
+}
+.arx-content p.st-note {
+    padding: 20px;
+    background-color: #f6f6e9;
+    font-size: 14px;
+    color: #444;
+}
+.arx-content p.st-accent {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.25;
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+/* embed */
+.arx-content .st-embed-frame {
+    border: 20px solid #111;
+}
+.arx-content .st-embed-frame figcaption {
+    background: #111;
+    color: #ccc;
+}
+.arx-content .st-embed-raised {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .25);
+}
+.arx-content .st-embed-raised figcaption {
+    margin-top: 4px;
+}
+
+/* line */
+.arx-content hr.st-line-black-extra-height:before  {
+     border-top: 4px solid #111;
+}
+.arx-content hr.st-line-gray-dashed:before  {
+     border-top: 2px dashed #ccc;
+}
+.arx-content hr.st-line-blue:before  {
+     border-top: 2px solid #458fff;
+}

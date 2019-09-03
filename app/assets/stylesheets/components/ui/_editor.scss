@@ -1,0 +1,228 @@
+// editor
+.arx-editor {
+
+    &,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    & [data-arx-type],
+    & a {
+        outline: none;
+    }
+    & [data-arx-type].arx-block-hover {
+       //outline: 2px solid rgba($color-blue, .3);
+       //outline-offset: 0;
+    }
+    & [data-arx-type=column] {
+        outline: 2px dashed rgba(#458fff, .25);
+    }
+    & [data-arx-type].arx-block-multiple-hover {
+        outline: 2px dashed rgba($color-red, .5) !important;
+        outline-offset: 0;
+    }
+    & [data-arx-type].arx-block-multiple-focus {
+        outline: 2px solid rgba($color-red, .7) !important;
+        outline-offset: 0;
+    }
+    & [data-arx-type].arx-block-focus {
+        outline: 2px solid rgba($color-blue, .5) !important;
+    }
+    & [data-arx-type].arx-block-focus-offset {
+        outline-offset: 4px;
+    }
+    & figure img {
+        display: block;
+    }
+    & [data-arx-type=embed] {
+        position: relative;
+        &:before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            z-index: 1;
+        }
+        & iframe {
+            display: inline-block;
+        }
+        & figcaption {
+            position: relative;
+            top: 0;
+            z-index: 2;
+        }
+    }
+    & figcaption {
+        display: block !important;
+        top: 0;
+    }
+    & .arx-empty-layer {
+        min-height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &  .arx-empty-layer:before,
+    & [data-placeholder]:empty:before {
+        content: attr(data-placeholder);
+        display: inline-block;
+        color: rgba($color-black, .4);
+        font-weight: normal;
+        font-style: italic;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 4px;
+    }
+    & [data-placeholder]:empty:focus:before {
+        content: "";
+    }
+    &  .arx-empty-layer:empty:focus:before {
+        content: attr(data-placeholder);
+    }
+
+}
+
+.arx-editor .arx-plus-button,
+.arx-editor .arx-plus-button:empty {
+    display: block;
+	border: 2px solid rgba($color-blue, .65);
+	font-size: 12px;
+	height: 28px;
+	width: 28px;
+	border-radius: 999px;
+	position: relative;
+	cursor: pointer;
+
+	&:after,
+	&:before {
+		content: "";
+		display: block;
+		background-color: rgba($color-blue, .85);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&:before {
+		height: 1em;
+		width: 2px;
+	}
+	&:after {
+		height: 2px;
+		width: 1em;
+	}
+	&:hover {
+    	& {
+        	border-color: $color-blue;
+    	}
+    	&:after,
+        &:before {
+            background-color: $color-blue;
+        }
+	}
+}
+
+
+
+// reorder
+.arx-handle {
+    cursor: move;
+}
+.arx-editor [data-arx-type].arx-active {
+    outline: 3px dashed #f5e027 !important;
+    outline-offset: 0 !important;
+    position: relative;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0;
+    &:before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: #fffcba;
+        position: absolute;
+        z-index: 1;
+    }
+}
+.arx-editor .arx-dragging {
+    opacity: 0.95;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(#111, .3);
+    & [data-arx-type] {
+        margin: 0;
+    }
+}
+
+
+// utils
+.arx-top-sticky {
+    position: fixed;
+    z-index: 100;
+}
+.arx-position-sticky {
+    position: sticky;
+    top: 0;
+}
+.arx-voice-label {
+    display: none;
+}
+.arx-grid-overlay {
+    position: relative;
+}
+.arx-grid-overlay::before {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: calc(100% - (2 * 0px));
+    max-width: none;
+    content: '';
+    background-image: repeating-linear-gradient(
+        to right,
+        $grid__color,
+        $grid__color calc((100% / var(--arx-grid-columns)) - var(--arx-grid-gutter)),
+        transparent calc((100% / var(--arx-grid-columns)) - var(--arx-grid-gutter)),
+        transparent calc(100% / var(--arx-grid-columns))
+    );
+    background-size: calc(100% + var(--arx-grid-gutter)) 100%;
+    background-position: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@include for-sm {
+    .arx-grid-overlay::before {
+        display: none;
+    }
+}
+
+@keyframes progress-bar-stripes {
+	from { background-position: 40px 0; }
+	to { background-position: 0 0; }
+}
+
+$color: rgba(255, 255, 255, .2);
+$angle: 45deg;
+
+.article-editor-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11000;
+	width: 100%;
+    background-color: rgba(#000, .2);
+
+    & span {
+    	animation: progress-bar-stripes 2s linear infinite;
+
+        content: '';
+        display: block;
+        min-height: 8px;
+        width: 100%;
+    	height: 100%;
+    	background-color: $color-blue;
+        background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+        background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+    	background-size: 40px 40px;
+    }
+}

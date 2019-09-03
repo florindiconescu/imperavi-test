@@ -1,0 +1,42 @@
+.arx-popup-upload-container {
+    background-color: #2b2d2f;
+
+    & .arx-form-section-or {
+        color: rgba(#fff, .75);
+    }
+    & input {
+        color: #fff;
+        background-color: rgba(#fff, .2);
+        border-color: transparent;
+    }
+    & input:focus {
+        border-color: rgba(#fff, .35);
+    }
+    & input::placeholder {
+        color: rgba(#fff, .35);
+    }
+    & button {
+        background-color: rgba($color-blue, .85);
+        border-color: transparent;
+        color: rgba(#fff, 1);
+    }
+    & button:hover {
+        background-color: rgba($color-blue, .65);
+    }
+}
+.arx-popup-images-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+
+    & img {
+        max-width: 100px;
+        max-height: 100px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        margin-right: 8px;
+    }
+    & img:hover {
+        outline: 3px solid $color-blue;
+    }
+}
