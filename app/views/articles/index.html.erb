@@ -1,5 +1,5 @@
 <% @articles.each do |article| %>
-  <h3><%= article.title %></h3>
+  <h3><%= article.title %> <%= link_to '✎', edit_article_path(article) %><%= link_to '⌫', article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></h3>
   <p><%= raw(article.rich_text) %></p>
   <p>Reading time: <%= article.read_time %> minutes</p>
   <p><small><%= article.date %></small></p>
